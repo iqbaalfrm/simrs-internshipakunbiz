@@ -87,4 +87,7 @@ Route::middleware('auth')->group(function () {
 
     // Logout (POST)
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/test-role', fn() => 'OK admin')->middleware('role:admin');
+
 });

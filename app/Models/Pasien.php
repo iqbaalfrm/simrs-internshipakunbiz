@@ -14,18 +14,9 @@ class Pasien extends Model
     protected $fillable = [
         'no_rm','no_antrian','nik','nama','jenis_kelamin','tanggal_lahir',
         'no_hp','alamat','jenis_kunjungan','poli_id','dokter_id',
-        'pembiayaan','no_bpjs'
+        'pembiayaan','no_bpjs',
     ];
 
-    // Relasi ke tabel polis
-    public function poli()
-    {
-        return $this->belongsTo(Poli::class, 'poli_id');
-    }
-
-    // Relasi ke tabel dokters
-    public function dokter()
-    {
-        return $this->belongsTo(Dokter::class, 'dokter_id');
-    }
+    public function poli()   { return $this->belongsTo(Poli::class, 'poli_id'); }
+    public function dokter() { return $this->belongsTo(Dokter::class, 'dokter_id'); }
 }

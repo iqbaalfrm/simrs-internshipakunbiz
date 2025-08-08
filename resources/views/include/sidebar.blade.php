@@ -92,7 +92,7 @@
                 @auth
                 <li class="sidebar-title mt-3">Akun</li>
                 <li class="sidebar-item">
-                    <form action="#" method="POST">
+                    <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button type="submit" class="sidebar-link btn w-100 text-start">
                             <i class="bi bi-box-arrow-right"></i><span>Logout</span>

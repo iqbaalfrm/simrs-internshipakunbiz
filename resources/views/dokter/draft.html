@@ -1,0 +1,22 @@
+ @forelse ($dokters as $dokter)
+                                    <tr>
+                                        <td>{{ $dokter->nama }}</td>
+                                        <td>{{ $dokter->poli }}</td>
+                                        <td>{{ $dokter->spesialis }}</td>
+                                        <td>{{ $dokter->jam_layanan }}</td>
+                                        <td>
+                                            <a href="{{ route('dokter.show', $dokter->id) }}" class="btn btn-sm btn-info">Detail</a>
+                                            <a href="{{ route('dokter.edit', $dokter->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('dokter.destroy', $dokter->id) }}" method="POST" class="d-inline"
+                                                  onsubmit="return confirm('Yakin ingin menghapus data dokter ini?')">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="5" class="text-center">Belum ada data dokter.</td>
+                                    </tr>
+                                @endforelse

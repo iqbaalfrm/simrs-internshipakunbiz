@@ -5,7 +5,9 @@
 <div class="card">
   <div class="card-header d-flex align-items-center justify-content-between">
     <h4 class="m-0">Data Pasien</h4>
-    <a href="{{ route('pendaftaran.create') }}" class="btn btn-primary">+ Daftar Pasien</a>
+    @role('admin')
+        <a href="{{ route('pendaftaran.create') }}" class="btn btn-primary">+ Daftar Pasien</a>
+    @endrole
   </div>
 
   <div class="card-body">

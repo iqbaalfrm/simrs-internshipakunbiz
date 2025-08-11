@@ -33,7 +33,7 @@
                                 @forelse ($dokters as $dokter)
                                     <tr>
                                         <td>{{ $dokter->nama }}</td>
-                                        <td>{{ $dokter->poli }}</td>
+                                        <td>{{ $dokter->poli->nama }}</td>
                                         <td>{{ $dokter->spesialis }}</td>
                                         <td>{{ $dokter->jam_layanan }}</td>
                                         <td>

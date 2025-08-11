@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create('dokters', function (Blueprint $table) {
+        Schema::create('dokters', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('poli');
+            
+            // --- INI BAGIAN YANG BENAR ---
+            // Membuat kolom 'poli_id' dan menghubungkannya ke tabel 'polis'
+            $table->foreignId('poli_id')->constrained('polis')->onDelete('cascade');
+            
             $table->string('spesialis');
             $table->string('jam_layanan');
             $table->timestamps();

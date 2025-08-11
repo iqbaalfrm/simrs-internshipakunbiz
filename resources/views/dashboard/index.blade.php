@@ -15,8 +15,8 @@
                                     <i class="iconly-boldShow"></i>
                                 </div>
                                 <div>
-                                    <h6 class="text-muted m-0">Jumlah Kriteria</h6>
-                                    <h4 class="fw-bold m-0">{{ $jumlahKriteria ?? 0 }}</h4>
+                                    <h6 class="text-muted m-0">Jumlah Passien</h6>
+                                    <h4 class="fw-bold m-0">{{ $jumlah_pasiens ?? 0 }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -32,8 +32,8 @@
                                     <i class="iconly-boldProfile"></i>
                                 </div>
                                 <div>
-                                    <h6 class="text-muted m-0">Jumlah Alternatif</h6>
-                                    <h4 class="fw-bold m-0">{{ $jumlahAlternatif ?? 0 }}</h4>
+                                    <h6 class="text-muted m-0">Jumlah Pegawai</h6>
+                                    <h4 class="fw-bold m-0">{{ $jumlah_pegawai ?? 0 }}</h4>
                                 </div>
                             </div>
                         </div>
